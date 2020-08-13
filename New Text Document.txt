@@ -1,0 +1,69 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<math.h>
+#include<process.h>
+#include<string.h>
+void password()
+{
+char p1[ ]="maa";
+char password[15];
+start:
+int p2=0,f;
+cout<<"\n\n\t\t\t\t\t Password : ";
+password[0]=getch();
+while(password[p2]!=13)
+{
+p2++;
+cout<<"*";
+password[p2]=getch();
+}
+password[p2++]='\0';
+f=strcmp(p1,password);
+if(f==0)
+{
+cout<<"\n\t\t\t\t\tPASSWORD ACCEPTED";
+cout<<"\n\t\t\t\t\tPRESS ANY KEY TO CONTINUE";
+getch();
+}
+else
+{
+cout<<"\n\t\t\t\t\tINVALID PASSWORD,TRY AGAIN";
+goto start;
+}
+}
+void main()
+{
+cout<<"\n\n\n\n****************** Welcome to world of simplified bussiness ***************** ";
+cout<<"\n\n\n\n Thanks for choosing your software for your simplifing your business needs.";
+cout<<"Here at MD corporation we try to provide best service with minimum optimisation       required. ";
+cout<<"Thanks again we appretiate your choice and expect that this software goes down well with you, as MD customers deserves nothing but best. ";
+cout<<"\n\nMD is a registered trademark.Anyone copying will be inviting legal action.";
+cout<<"\n\n\n\n\npress any key to proceed";
+getch();
+clrscr();
+cout<<"\n\n\t\t ^^******WELCOME TO COMMERCE TRADE INDUSTRY TRAFFIC******^^"<<endl;
+user:
+cout<<"\n\t\t\t\tEnter Username=>  ";
+char username[10];
+gets(username);
+
+if(strcmpi(username,"mudit")==0)
+{
+cout<<"\t\t\t\tUsername accepted";
+password();
+}
+else if(strcmpi(username,"shaveta")==0)
+{
+cout<<"\t\t\t\tUsername accepted";
+password();
+}
+else
+{
+cout<<"\t\t\t\tUsername not found";
+goto user;
+}
+clrscr();
+
+getch();
+}
